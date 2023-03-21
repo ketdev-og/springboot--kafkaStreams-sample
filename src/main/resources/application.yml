@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        order-input-channel:
+          destination: user
+        order-output-channel:
+          destination: home-service
+        order-takeaway-output-channel:
+          destination: takeaway-service
+  kafka:
+    streams:
+      bootstrap-servers: localhost:9092
+      application-id: "ketem-id"
+
